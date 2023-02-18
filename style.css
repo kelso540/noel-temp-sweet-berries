@@ -1,0 +1,419 @@
+/* ******core styles of page***** */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: var(--black-text);
+}
+
+:root{
+    --background-color: #F5F3EF;
+    --card-color: #FFFFFF;
+    --yellow-accent:#FEBD2F;
+    --black-text: #000000;
+    --gray-text: #646464;
+    --outline: #DCDCDC;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100px 590px 780px auto;
+    grid-template-areas: 
+    "head head head head"
+    "slogan slogan slogan slogan"
+    "main main main main"
+    "footer footer footer footer";
+}
+
+/* ********* end of core styles ********* */
+
+
+/* ************** NAVBAR CSS *********** */
+
+.header{
+    background-color: var(--background-color);
+    grid-area: head;
+    display: flex;
+    align-items: center;
+}
+
+.header nav{
+    display: flex;
+    justify-content: flex-start;  
+    padding-left: 80px;
+    width: 33%; 
+}
+nav a{ 
+    margin-right: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.img{
+    width: 33%;
+    text-align: center;
+    object-fit: cover;
+}
+.header img{
+    height: 38px;
+    object-fit: cover;
+}
+
+.btn{
+    width: 33%; 
+    padding-right: 50px; 
+    text-align: end;
+}
+.header button{
+    background-color: var(--black-text);
+    color: var(--background-color);
+    padding: 13px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: grabbing;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+/* ******************* END OF NAVBAR CSS ************ */
+
+
+/* ******************* START OF SLOGAN/TITLE CSS ********* */
+
+
+.slogan{
+    background-color: var(--background-color);
+    grid-area: slogan;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 55px;
+}
+
+.title-card{
+    display: flex;
+    flex-direction: column;
+}
+
+.title-card h1{
+    padding-bottom: 20px;
+    font-family: 'Roboto Serif';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 75px;
+    /* width: 600px; */
+    /* height: 225px; */
+    left: 80px;
+    top: 108px;
+}
+
+.title-card p{
+    color: var(--gray-text);
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.title-image{
+    /* width: 600px; */
+    /* height: 440px; */
+}
+
+.title-image img{
+    /* width: 600px; */
+    /* height: 440px; */
+}
+/* ********** END OF SLOGAN/TITLE CSS********* */
+
+/* ********* START OF MAIN CARDS CSS ********* */
+.main{
+    background-color: var(--background-color);
+    grid-area: main;
+}
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    padding: 0 50px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 35px;
+    gap: 15px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.05);
+    border-radius: 40px;
+    position: relative;
+}
+
+.card p{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--gray-text);
+    padding: 10px 0 70px 0 ;
+    /* width: 320px; */
+    
+}
+
+.card h3{
+    font-family: 'Roboto Serif';
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+#yellow-card{
+    background-color: var(--yellow-accent);
+    font-weight: 500;
+    font-size: 40px;
+    font-family: 'Outfit', sans-serif;
+    font-family: 'Roboto Serif', serif;
+}
+
+#yellow-card h3{
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    /* position: absolute; */
+    /* height: 188px; */
+    /* left: 10%;
+    right: 10%; */
+    top: calc(50% - 188px/2 - 27px);
+}
+
+
+.card button{
+    text-decoration: none;
+    border: none;
+    align-self: flex-start;
+    background-color: white;
+    padding: 8px;
+    border-radius: 50px;
+    border: 1px solid var(--outline);
+    font-size: 18px;
+    line-height: 28px;
+    width: 143px;
+    height: 48px;
+    position: absolute;
+    left: 40px;
+    top: 230px;
+    cursor: grabbing;
+}
+
+.card img:first-child{
+    width: auto;
+    height: auto;
+    /* ****NOTE then we can add position absolute and img will stay positioned inside the container**** */
+    position: absolute;
+    top: -40px;
+    right: 48px;
+}
+
+
+
+
+
+
+/* ********** END OF MAIN CARDS CSS ******** */
+
+/* ********* START OF FOOTER CSS ********* */
+.footer{
+    background-color: var(--yellow-accent);
+    grid-area: footer;
+    padding: 27px;
+}
+
+.footer-img{
+    display: flex;
+    justify-content: center;
+}
+
+.footer-img img{
+    width: 150px;
+}
+
+/* ******** END OF FOOTER & CONTAINER CSS **** */
+
+/** tablet css **/
+@media screen and (max-width: 1000px){
+    .grid-container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 100px auto auto auto;
+        grid-template-areas: 
+        "head head head head"
+        "slogan slogan slogan slogan"
+        "main main main main"
+        "footer footer footer footer";
+    }
+
+    .slogan{
+        background-color: var(--background-color);
+        grid-area: slogan;
+        display: flex;
+        flex-direction: column;
+        /* border: 10px double red; */
+    }
+
+    .title-card{
+        width: auto;
+        display: flex;
+        padding: 50px 0 50px 0;
+        /* border: 2px solid red; */
+    }
+
+    .title-card h1{
+        /* width: 600px;
+        height: 112px; */
+        font-family: 'Roboto Serif';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 56px;
+        text-align: center;
+        /* border: 3px solid green; */
+        margin: 0 0 20px 0;
+    }
+    
+    .title-card p{
+        color: var(--gray-text);
+        /* width: 600px; */
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 32px;;
+        text-align: center;
+        /* border: 4px dotted purple; */
+        letter-spacing: 0.1px;
+    }
+
+    .title-image{
+        display: flex;
+        /* border: 3px solid yellow; */
+        /* width: 800px; */
+    }
+
+    .title-image img{
+        object-fit: cover;
+        /* width: 800px; */
+        border-radius: 20px;
+    }
+
+    .card-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px;
+        padding: 90px 30px;
+    }
+
+}
+
+/* ************* moblie css **** */
+
+@media (max-width: 600px) {
+    .grid-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        /* grid-template-rows: 100px 800px 2150px auto; */
+        grid-template-areas: 
+        "head head head head"
+        "slogan slogan slogan slogan"
+        "main main main main"
+        "footer footer footer footer";
+    }
+
+    .card-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 200px;
+        gap: 60px;
+        padding: 90px 30px;
+    }   
+    .btn{
+        display: none;
+     }
+
+     .header nav{
+    visibility: hidden;
+    }
+
+    .slogan{
+        background-color: var(--background-color);
+        grid-area: slogan;
+        display: flex;
+        flex-direction: column;
+        /* border: 10px double red; */
+    }
+
+    .title-card{
+        width: auto;
+        display: flex;
+        padding: 50px 0 50px 0;
+        /* border: 2px solid red; */
+    }
+
+    .title-card h1{
+        /* width: 600px; */
+        /* height: 112px; */
+        font-family: 'Roboto Serif';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 56px;
+        text-align: center;
+        /* border: 3px solid green; */
+        margin: 0 0 20px 0;
+    }
+    
+    .title-card p{
+        color: var(--gray-text);
+        /* width: 600px; */
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 32px;;
+        text-align: center;
+        /* border: 4px dotted purple; */
+        letter-spacing: 0.1px;
+    }
+
+    .title-image{
+        display: flex;
+        /* border: 3px solid yellow; */
+        /* width: 500px; */
+    }
+
+    .title-image img{
+        /* object-fit: cover; */
+        width: 100%;
+        padding: 0;
+        margin: 10px;
+        border-radius: 20px;
+    }
+
+
+
+
+  }
